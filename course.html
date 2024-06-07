@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International School Courses</title>
+  <link rel="stylesheet" href="course.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        
+</head>
+<body>
+  <header class="text-center header-social-icon text-lg-start bg-primary text-white">
+    <div class="container">
+        <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+            <div class="me-5 d-lg-block">
+                <span><i class="fa fa-phone mx-1"></i>+91 1234567890</span>
+                <span><i class="fa fa-calendar mx-1"></i>Mon-Fri: 10:00-04:00</span>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/" class="me-4 text-reset"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/x." class="me-4 text-reset"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjekN_x1daFAxWsbWwGHctiDJsQPAgJ"
+                    class="me-4 text-reset"><i class="fa fa-google"></i></a>
+                <a href="https://www.instagram.com/" class="me-4 text-reset"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="me-4 text-reset"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/" class="me-4 text-reset"><i class="fa fa-github"></i></a>
+            </div>
+        </section>
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand mx-5 fw-bold" href="index.html"><span>Nadu Nedu</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="course.html">Courses</a></li>
+            <li class="nav-item mx-3"><a href="calender.html" class="nav-link">Academic Calendar</a></li>
+            <li class="nav-item mx-3"><a href="activites.html" class="nav-link">Extracurricular Activities</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div id="courses-list">
+    <h2>Courses Offered</h2>
+    <ul id="course-items">
+      <!-- Course items will be dynamically added here -->
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const courses = [
+    { 
+      name: "(IB) Program.", 
+      description: "The International Baccalaureate (IB) Program is a globally recognized educational framework offering rigorous curriculum and assessment to students aged 3 to 19. Emphasizing critical thinking, intercultural understanding, and personal development, IB fosters well-rounded learners equipped for success in a rapidly changing world. With its inquiry-based approach and focus on holistic education, IB encourages students to become active, compassionate, and lifelong learners. Through its diverse range of subjects and international perspective, IB cultivates a deep appreciation for cultural diversity and promotes a sense of global citizenship.",
+      image: "course/ib.jpg"
+    },
+    { 
+      name: "Language Courses", 
+      description: "Language courses provide invaluable opportunities for individuals to immerse themselves in new cultures, broaden their horizons, and enhance their communication skills. From mastering the nuances of grammar to fluently conversing in another tongue, these courses offer structured learning environments tailored to various proficiency levels. Whether it's acquiring proficiency for travel, career advancement, or personal enrichment, language courses empower learners to navigate a globalized world with confidence and understanding. With diverse teaching methods and interactive platforms, these courses facilitate not only linguistic prowess but also foster appreciation for the rich tapestry of human expression.",
+      image: "course/language course.webp"
+    },
+    {
+      name: "Global Studies", 
+      description: "Global Studies is an interdisciplinary field that examines the interconnectedness of societies, cultures, economies, and politics on a global scale. It delves into issues such as globalization, international relations, and global challenges like climate change and human rights. Through a holistic approach, Global Studies seeks to understand the complex dynamics shaping our world and explore solutions to global problems. It emphasizes the importance of cross-cultural understanding and cooperation in addressing global issues for a sustainable future.",
+      image: "course/global.jpg"
+    },
+    {
+      name: "STEM   .", 
+      description: "STEM (Science, Technology, Engineering, and Mathematics) fields encompass a diverse array of disciplines vital for innovation and progress. Through scientific inquiry, technological advancements, engineering solutions, and mathematical analysis, STEM drives the forefront of human achievement. From unraveling the mysteries of the universe to developing cutting-edge technologies, STEM empowers us to understand, create, and shape the world around us. Embracing STEM education fosters critical thinking, problem-solving skills, and a collaborative spirit, paving the way for a brighter, more sustainable future.",
+      image: "course/STEM.jpeg"
+    },
+    {
+      name: "Social Sciences", 
+      description: "Social sciences encompass a diverse array of disciplines dedicated to understanding human behavior and societal structures. Through disciplines like sociology, anthropology, psychology, and economics, social scientists examine everything from individual motivations to global trends. By employing various methodologies, including qualitative and quantitative research, they strive to unravel the complexities of human interactions, cultural norms, and power dynamics. Ultimately, social sciences provide invaluable insights into the intricacies of human societies, aiding in the formulation of policies and solutions for a better world.",
+      image: "course/SOCIAL.png"
+    },
+    {
+      name: "Arts and Humanities", 
+      description: "Arts and Humanities are the soul's mirror, reflecting the essence of human expression and experience through various mediums. They delve into the depths of culture, history, and emotion, shaping perspectives and fostering empathy. Through literature, music, visual arts, and philosophy, they offer a timeless dialogue that transcends boundaries, connecting individuals across time and space. At the intersection of creativity and intellect, Arts and Humanities illuminate the diverse tapestry of human existence, enriching society with beauty, insight, and meaning.",
+      image: "course/ARTS.png"
+    },
+    {
+      name: "Media and Communication", 
+      description: "Media and communication serve as the lifeblood of modern society, shaping opinions, disseminating information, and connecting individuals worldwide. Through various platforms such as television, radio, print, and digital media, messages traverse boundaries, influencing cultures and catalyzing change. With the advent of social media, the landscape has evolved, offering unprecedented immediacy and interactivity. In this digital age, media and communication stand as pillars of connectivity, shaping the narrative of our collective experience.",
+      image: "course/MEDIA.jpg"
+    },
+  ];
+
+  const courseList = document.getElementById("course-items");
+  courses.forEach(course => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("course-item");
+
+    const imageElement = document.createElement("img");
+    imageElement.src = course.image;
+    imageElement.alt = course.name;
+    imageElement.width = 400;
+    imageElement.height = 250;
+
+    const nameElement = document.createElement("span");
+    nameElement.classList.add("course-name");
+    nameElement.textContent = course.name;
+
+    const descriptionElement = document.createElement("span");
+    descriptionElement.classList.add("course-description");
+    descriptionElement.textContent = course.description;
+
+    listItem.appendChild(imageElement);
+    listItem.appendChild(document.createElement("br"));
+    listItem.appendChild(nameElement);
+    listItem.appendChild(document.createElement("br"));
+    listItem.appendChild(descriptionElement);
+
+    courseList.appendChild(listItem);
+  });
+});
+  </script>
+</body>
+</html>

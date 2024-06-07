@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calender.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Calendar</title>
+</head>
+<body>
+    <header class="text-center header-social-icon text-lg-start bg-primary text-white">
+        <div class="container">
+            <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+                <div class="me-5 d-lg-block">
+                    <span><i class="fa fa-phone mx-1"></i>+91 1234567890</span>
+                    <span><i class="fa fa-calendar mx-1"></i>Mon-Fri: 10:00-04:00</span>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/" class="me-4 text-reset"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/x." class="me-4 text-reset"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjekN_x1daFAxWsbWwGHctiDJsQPAgJ"
+                        class="me-4 text-reset"><i class="fa fa-google"></i></a>
+                    <a href="https://www.instagram.com/" class="me-4 text-reset"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" class="me-4 text-reset"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/" class="me-4 text-reset"><i class="fa fa-github"></i></a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand mx-5 fw-bold" href="index.html"><span>Nadu Nedu</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="course.html">Courses</a></li>
+                    <li class="nav-item mx-3"><a href="calender.css" class="nav-link">Academic Calendar</a></li>
+                    <li class="nav-item mx-3"><a href="activites.html" class="nav-link">Extracurricular Activities</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <h1>Calendar</h1> 
+    </div>
+    
+    <div class="heading">
+        <h2>2023 Academic Calendar</h2>        
+    </div>
+
+    <div id="calendar-container"></div>
+
+    <script>
+        const events = {
+            "June-2023": [
+                { date: "28th June Wednesday", description: "CRM Day (Reception to Gr 1) & (Gr 9 to 11)" },
+                { date: "29th June Thursday", description: "CRM Day (Gr 2 to 5)" },
+                { date: "30th June Friday", description: "CRM Day (Gr 6 to 8)" }
+            ],
+            "July-2022": [
+                { date: "1st July Saturday", description: "School reopens for all students" },
+                { date: "10th – 24rd July Monday - Monday", description: "RC D - Summative Assessments for Gr 12" },
+                { date: "29 July Saturday", description: "Bakrid" },
+                { date: "1st – 7th July Saturday - Friday", description: "Gr 11 DP orientation week" }
+            ],
+            "August-2023": [
+                { date: "2nd August Wednesday", description: "Gr 12 Leadership Camp begins" },
+                { date: "10th – 11th August Thursday - Friday", description: "Gr 12 PTM" },
+                { date: "15th August Tuesday", description: "Independence Day" },
+                { date: "4th August Friday", description: "RC D examination reports published for Gr 12" },
+                { date: "9th August Wednesday", description: "Bonalu" },
+                { date: "25th August Friday", description: "RC A - Summative Assessments for <br> Gr 6 to 10 begin" },
+                { date: "4th August Friday", description: "Gr 12 Leadership Camp ends" },
+                { date: "14th August Monday", description: "Investiture" },
+                { date: "29th August Tuesday", description: "ONAM" }
+            ],
+            "September-2023": [
+                { date: "2nd September Thursday", description: "GRC A - Summative Assessments for <br> Gr 12 begin" },
+                { date: "13th September Monday", description: "Gr 11 Leadership Camp begins" },
+                { date: "22nd September Wednesday", description: "PTM for Gr 6 to 8 ends" }
+            ],
+            "October-2023": [
+                { date: "2nd October Monday", description: "GANDHI JAYANTHI" },
+                { date: "4th October Wednesday", description: "GRAND TEST FOR ALL GRADE STUDENTS BEGINS" },
+                { date: "17 October Tuesday", description: "GRAND TEST FOR ALL GRADE STUDENTS ENDS" },
+                { date: "18th October Wednesday", description: "Dussehra celebrations" },
+                { date: "19th to 24 October", description: "Dussehra Holidays forstudents" },
+                { date: "25th October Wednesday", description: "School Re-opens for all Students" },
+                { date: "27th October Thursday", description: "Parent & Teacher Meeting" },
+                { date: "28th October Friday", description: "Maharishi Valmiki Jayanti" },
+                { date: "31st October Monday", description: "Cultural Fest" }
+            ]
+        };
+
+        function generateEventHTML(events) {
+            let htmlContent = '';
+
+            for (const [month, eventsList] of Object.entries(events)) {
+                htmlContent += `<div class="body">
+                    <h3>${month}</h3>
+                    <ul type="-">
+                        <table class="table table-bordered">`;
+
+                for (let i = 0; i < eventsList.length; i += 3) {
+                    htmlContent += `<tr>`;
+                    for (let j = 0; j < 3; j++) {
+                        if (i + j < eventsList.length) {
+                            const event = eventsList[i + j];
+                            htmlContent += `
+                                <td>
+                                    <li>
+                                        <h4>${event.date}</h4>
+                                        <p>${event.description}</p>
+                                    </li>
+                                </td>`;
+                        } else {
+                            htmlContent += `<td></td>`;
+                        }
+                    }
+                    htmlContent += `</tr>`;
+                }
+
+                htmlContent += `
+                        </table>
+                    </ul>
+                </div>`;
+            }
+
+            return htmlContent;
+        }
+
+        document.getElementById('calendar-container').innerHTML = generateEventHTML(events);
+    </script>
+</body>
+</html>

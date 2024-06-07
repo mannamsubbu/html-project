@@ -1,0 +1,116 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #ff9f55;
+  opacity: 0.7;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px;
+  position: relative;
+  background-color: inherit;
+  width: calc(50% - 10px);
+  overflow: hidden;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -12px;
+  background-color: white;
+  /* Change dot color to white */
+  border: 4px solid #ff9f55;
+  top: 12px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left,
+.right {
+  width: 45%; /* Adjusted width */
+}
+
+.left {
+  right: 50%;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 17px;
+  width: 0;
+  z-index: 1;
+  right: 25px;
+  border: medium solid white;
+  border-width: 8px 0 8px 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 17px;
+  width: 0;
+  z-index: 1;
+  left: 25px;
+  border: medium solid #ffa500;
+  border-width: 8px 8px 8px 0;
+  border-color: transparent #ffa500 transparent transparent;
+}
+.school{
+  width: 500px;
+}
+.buss{
+  width: 500px;
+}
+.class{
+  width: 500px;
+}
+.cafe{
+  width: 500px;
+}
+.library{
+  width: 500px;
+}
+.staff{
+  width: 500px;
+}
+.right::after {
+  left: -12px;
+}
+
+.content {
+  padding: 20px;
+  background-color: #ffa500;
+  position: initial;
+  border-radius: 6px;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}

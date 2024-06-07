@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#courses-list {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#course-items {
+  list-style-type: none;
+  padding: 0;
+}
+
+.course-name {
+  font-weight: bold;
+}
+
+.course-description {
+  color: #666;
+  flex: 1;
+  margin-top: 0;
+}
+.course-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.course-item img {
+  margin-right: 20px;
+}
+
+header {
+  padding: 1px 0;
+}
+
+nav {
+  padding: 1px 0;
+  margin-bottom: 5px;
+  background: #fff!important;
+  box-shadow: 1px 1px 2px #4444;
+}
+
+.navbar-brand {
+  color: var(--bs-orange)!important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 10px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.navbar-toggler {
+  outline: none!important;
+  padding: none!important;
+}
+
+@media (max-width: 577px) {
+  .header-social-icon {
+    display: none;
+  }
+}
+/* Add this CSS to your existing course.css file or create a new one */
+
+/* Styles for larger screens */
+@media (min-width: 992px) {
+  /* Adjust padding for the header */
+  .header-social-icon {
+    padding: 10px 0;
+  }
+
+  /* Adjust margin for the navbar brand */
+  .navbar-brand {
+    margin-right: 2rem;
+  }
+
+  /* Adjust margin for navbar items */
+  .navbar-nav {
+    margin-right: auto;
+    margin-left: 1rem;
+  }
+
+  /* Adjust the size of course images */
+  .course-item img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+/* Styles for smaller screens */
+@media (max-width: 991.98px) {
+  /* Adjust padding for the header */
+  .header-social-icon {
+    padding: 5px 0;
+  }
+
+  /* Adjust margin for navbar items */
+  .navbar-nav {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  /* Adjust size of course images */
+  .course-item img {
+    width: 100%;
+    height: auto;
+  }
+}

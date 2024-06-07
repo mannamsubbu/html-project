@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>International School Activities</title>
+  <link rel="stylesheet" href="activities.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="text-center header-social-icon text-lg-start bg-primary text-white">
+    <div class="container">
+        <section class="d-flex justify-content-center justify-content-lg-between p-2 border-bottom">
+            <div class="me-5 d-lg-block">
+                <span><i class="fa fa-phone mx-1"></i>+91 1234567890</span>
+                <span><i class="fa fa-calendar mx-1"></i>Mon-Fri: 10:00-04:00</span>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/" class="me-4 text-reset"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/x." class="me-4 text-reset"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjekN_x1daFAxWsbWwGHctiDJsQPAgJ"
+                    class="me-4 text-reset"><i class="fa fa-google"></i></a>
+                <a href="https://www.instagram.com/" class="me-4 text-reset"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/" class="me-4 text-reset"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/" class="me-4 text-reset"><i class="fa fa-github"></i></a>
+            </div>
+        </section>
+    </div>
+</header>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand mx-5 fw-bold" href="index.html"><span>Nadu Nedu</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-3"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="course.html">Courses</a></li>
+            <li class="nav-item mx-3"><a href="calender.html" class="nav-link">Academic Calendar</a></li>
+            <li class="nav-item mx-3"><a href="activites.html" class="nav-link">Extracurricular Activities</a></li>
+            <li class="nav-item mx-3"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div id="activities-list" class="container mt-4">
+    <h2>Extracurricular Activities</h2>
+    <p>Our school offers a wide variety of extracurricular activities aimed at fostering all-around development, promoting social interaction, and encouraging personal growth. These activities provide students with invaluable experiences outside the traditional academic environment, allowing them to pursue their passions, develop new skills, and build lifelong friendships. Participating in extracurricular activities can significantly enhance a student's educational journey by promoting teamwork, leadership, and a sense of community. Below is a list of some of the exciting extracurricular activities available at our school:</p>
+    <ul id="activity-items" class="list-unstyled">
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const activities = [
+        {
+          name: "Model United Nations (MUN)",
+          description: "Simulates UN meetings, enhancing skills in diplomacy, negotiation, and public speaking. Students represent different countries and engage in discussions about global issues. Participation in MUN conferences provides students with opportunities to develop critical thinking, research, and teamwork skills while gaining insights into international affairs.",
+          image: "activities/mun.jpg"
+        },
+        {
+          name: "Debate Club",
+          description: "Focuses on developing argumentative and public speaking skills through structured debates. Students learn to construct and defend arguments on various topics. Debating allows students to explore different viewpoints, improve their communication skills, and build confidence in expressing their ideas.",
+          image: "activities/debate.jpg"
+        },
+        {
+          name: "Robotics and Coding Clubs",
+          description: "Offers hands-on experience in technology and engineering, often involving competitions. Students design, build, and program robots, fostering creativity and problem-solving skills. Robotics and coding clubs provide a platform for students to explore STEM fields, develop logical reasoning, and collaborate on innovative projects.",
+          image: "activities/robotics.jpg"
+        },
+        {
+          name: "Drama and Theatre",
+          description: "Provides opportunities to participate in school plays, musicals, and drama workshops. Students explore acting, directing, and stagecraft, enhancing their confidence and creativity. Drama and theatre activities promote self-expression, teamwork, and an appreciation for the performing arts.",
+          image: "activities/drama.jpg"
+        },
+        {
+          name: "Service Clubs",
+          description: "Such as Habitat for Humanity, promoting volunteer work and community service projects. Students engage in activities that benefit the local community and learn the value of giving back. Service clubs instill a sense of social responsibility, empathy, and the importance of civic engagement.",
+          image: "activities/service.jpg"
+        },
+        {
+          name: "Student Government",
+          description: "Provides leadership opportunities through student council and committees. Students can run for office, organize events, and represent their peers, developing leadership and organizational skills. Involvement in student government fosters a sense of responsibility, governance, and the ability to effect positive change within the school community.",
+          image: "activities/student.jpeg"
+        },
+        {
+          name: "Language Clubs",
+          description: "Encourages learning and practicing different languages, such as French, Spanish, Mandarin, etc. Students immerse themselves in new cultures and improve their language skills through interactive activities. Language clubs offer cultural exchange experiences, enhance linguistic abilities, and broaden global awareness.",
+          image: "activities/language.jpg"
+        },
+        {
+          name: "Chess Club",
+          description: "Enhances strategic thinking and competitive play. Students of all skill levels can learn the game, participate in tournaments, and improve their analytical abilities. Chess club fosters patience, concentration, and sportsmanship, providing a stimulating mental challenge.",
+          image: "activities/chess.jpeg"
+        },
+      ];
+
+      const activityList = document.getElementById("activity-items");
+      activities.forEach(activity => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("activity-item", "mb-4");
+
+        const imageElement = document.createElement("img");
+        imageElement.src = activity.image;
+        imageElement.alt = activity.name;
+        imageElement.width = 400;
+        imageElement.height = 250;
+        imageElement.classList.add("img-fluid");
+
+        const nameElement = document.createElement("h4");
+        nameElement.classList.add("activity-name", "mt-2");
+        nameElement.textContent = activity.name;
+
+        const descriptionElement = document.createElement("p");
+        descriptionElement.classList.add("activity-description");
+        descriptionElement.textContent = activity.description;
+
+        listItem.appendChild(imageElement);
+        listItem.appendChild(nameElement);
+        listItem.appendChild(descriptionElement);
+
+        activityList.appendChild(listItem);
+      });
+    });
+  </script>
+</body>
+</html>
